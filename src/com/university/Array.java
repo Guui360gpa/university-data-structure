@@ -19,7 +19,16 @@ public class Array {
 
     public Student get(int index){
         //accept index and return student
-        return null;
+        if (indexOfBound(index)){
+            return students[index];
+        }else {
+            throw new IllegalArgumentException("invalid index!");
+        }
+
+    }
+
+    private boolean indexOfBound(int index){
+        return index >= 0 && index < totStudents;
     }
 
     public void remove(int index){
