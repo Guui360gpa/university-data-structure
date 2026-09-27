@@ -4,9 +4,17 @@ import java.util.Arrays;
 
 public class Array {
     private Student[] students = new Student[100];
+    private int totStudents = 0;
 
     public void add(Student student){
         //accepts students
+        for (int i = 0; i < students.length; i++) {
+            if (students[i] == null){
+                students[i] = student;
+                totStudents++;
+                break;
+            }
+        }
     }
 
     public Student get(int index){
