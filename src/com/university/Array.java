@@ -28,12 +28,17 @@ public class Array {
 
     public boolean contains(Student student){
         //source if student contains in array (return true or false)
+        for (int i = 0; i < totStudents; i++) {
+            if (student.equals(students[i])){
+                return true;
+            }
+        }
         return false;
     }
 
     public int length(){
         //return the array length
-        return 0;
+        return totStudents;
     }
 
     @Override

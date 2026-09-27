@@ -13,5 +13,7 @@ public class ArrayTest {
         list.add(s2);
 
         System.out.println(list);
+        System.out.println("Size: " + list.length());
+        System.out.println("The list contains " + s1.getName() + "? " + list.contains(s1));
     }
 }
