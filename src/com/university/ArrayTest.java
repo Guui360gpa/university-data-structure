@@ -28,5 +28,8 @@ public class ArrayTest {
         list.add(1,s3);
         System.out.println(list);
 
+        list.remove(0);
+        System.out.println(list);
+
     }
 }

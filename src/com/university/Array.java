@@ -44,6 +44,10 @@ public class Array {
 
     public void remove(int index){
         //accept index and remove student in array
+        for (int i = index; i < this.totStudents ; i++) {
+            this.students[i] = this.students[i+1];
+        }
+        totStudents--;
     }
 
     public boolean contains(Student student){
