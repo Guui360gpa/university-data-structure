@@ -31,5 +31,11 @@ public class ArrayTest {
         list.remove(0);
         System.out.println(list);
 
+        for (int i = 0; i < 300; i++) {
+            Student s = new Student("Pedro" + i);
+            list.add(s);
+        }
+        System.out.println(list);
+
     }
 }

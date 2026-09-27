@@ -8,6 +8,7 @@ public class Array {
 
     public void add(Student student){
         //accepts students
+        this.securesSpot();
         for (int i = 0; i < students.length; i++) {
             if (students[i] == null){
                 students[i] = student;
@@ -18,6 +19,7 @@ public class Array {
     }
 
     public void add(int index, Student student){
+        this.securesSpot();
         if (!indexOfBound(index)){
             throw new IllegalArgumentException("index invalid!");
         }
@@ -26,6 +28,16 @@ public class Array {
         }
         students[index] = student;
         totStudents++;
+    }
+
+    private void securesSpot(){
+        if (totStudents == students.length){
+            Student[] newArray = new Student[students.length*2];
+            for (int i = 0; i < students.length; i++) {
+                newArray[i] = students[i];
+            }
+            this.students = newArray;
+        }
     }
 
     public Student get(int index){
