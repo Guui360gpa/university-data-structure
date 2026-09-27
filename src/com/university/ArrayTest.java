@@ -19,6 +19,14 @@ public class ArrayTest {
         System.out.println("The list contains " + s3.getName() + "? " + list.contains(s3));
         System.out.println("Student 1: " + list.get(0));
         System.out.println("Student 2: " + list.get(1));
-        System.out.println("Student 3: " + list.get(2));
+        try{
+            System.out.println("Student 3: " + list.get(2));
+        }catch (IllegalArgumentException ex){
+            System.out.println("Student 3: " + ex.getMessage());
+        }
+
+        list.add(1,s3);
+        System.out.println(list);
+
     }
 }

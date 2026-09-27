@@ -17,6 +17,17 @@ public class Array {
         }
     }
 
+    public void add(int index, Student student){
+        if (!indexOfBound(index)){
+            throw new IllegalArgumentException("index invalid!");
+        }
+        for (int i = totStudents -1; i >= index; i--) {
+            students[i+1] = students[i];
+        }
+        students[index] = student;
+        totStudents++;
+    }
+
     public Student get(int index){
         //accept index and return student
         if (indexOfBound(index)){
