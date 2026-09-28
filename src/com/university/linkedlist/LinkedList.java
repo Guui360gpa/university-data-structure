@@ -7,23 +7,26 @@ public class LinkedList {
     private int totElements = 0;
 
     public void addToBeginning(Object element){
-        Cell cell = new Cell(element,first);
-        this.first = cell;
-
         if (this.totElements == 0){
-            this.last = this.first;
+            Cell newCell = new Cell(element);
+            this.first = newCell;
+            this.last = newCell;
+        } else {
+            Cell newCell = new Cell(element,this.first);
+            this.first.setPrevious(newCell);
+            this.first = newCell;
         }
-
-        this.totElements++;
+        totElements++;
     }
 
     public void add(Object element){
         if (this.totElements == 0) {
             addToBeginning(element);
         }else {
-            Cell cell = new Cell(element,null);
-            this.last.setNext(cell);
-            this.last = cell;
+            Cell newCell = new Cell(element);
+            this.last.setNext(newCell);
+            newCell.setPrevious(this.last);
+            this.last = newCell;
             this.totElements++;
         }
     }
