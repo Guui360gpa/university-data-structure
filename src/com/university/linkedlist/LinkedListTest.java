@@ -25,5 +25,8 @@ public class LinkedListTest {
 
         list.removeToBeginning();
         System.out.println(list);
+
+        list.removeFromEnd();
+        System.out.println(list);
     }
 }

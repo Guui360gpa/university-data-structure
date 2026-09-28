@@ -80,6 +80,17 @@ public class LinkedList {
         }
     }
 
+    public void removeFromEnd(){
+        if (this.totElements == 1){
+            this.removeToBeginning();
+        }else {
+            Cell penultimate = this.last.getPrevious();
+            penultimate.setNext(null);
+            this.last = penultimate;
+            this.totElements--;
+        }
+    }
+
     public void remove(int index){
 
     }
