@@ -35,11 +35,15 @@ public class LinkedList {
         if (index == 0){
             addToBeginning(element);
         } else if (index == this.totElements) {
-            add(element);
+            this.add(element);
         }else {
-            Cell previous = this.getCell(index - 1);
-            Cell cell = new Cell(element,previous.getNext());
-            previous.setNext(cell);
+            Cell previous = getCell(index - 1);
+            Cell next = previous.getNext();
+
+            Cell newCell = new Cell(element,previous.getNext());
+            newCell.setPrevious(previous);
+            previous.setNext(newCell);
+            next.setPrevious(newCell);
             this.totElements++;
         }
     }
