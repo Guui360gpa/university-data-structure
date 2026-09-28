@@ -11,5 +11,8 @@ public class LinkedListTest {
         System.out.println(list);
         list.addToBeginning("guilherme");
         System.out.println(list);
+
+        list.add("marcelo");
+        System.out.println(list);
     }
 }
