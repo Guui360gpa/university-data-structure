@@ -92,7 +92,20 @@ public class LinkedList {
     }
 
     public void remove(int index){
+        if (index == 0){
+            this.removeToBeginning();
+        } else if (index == this.totElements -1) {
+            this.removeFromEnd();
+        }else {
+            Cell previous = this.getCell( index - 1);
+            Cell current = previous.getNext();
+            Cell next = current.getNext();
 
+            previous.setNext(next);
+            next.setPrevious(previous);
+
+            this.totElements--;
+        }
     }
 
     public int length(){
