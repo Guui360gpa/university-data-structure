@@ -29,7 +29,33 @@ public class LinkedList {
     }
 
     public void add(int index, Object element){
+        if (index == 0){
+            addToBeginning(element);
+        } else if (index == this.totElements) {
+            add(element);
+        }else {
+            Cell previous = this.getCell(index - 1);
+            Cell cell = new Cell(element,previous.getNext());
+            previous.setNext(cell);
+            this.totElements++;
+        }
+    }
 
+    private boolean indexBusy(int index){
+        return index >= 0 && index < this.totElements;
+    }
+
+    private Cell getCell(int index){
+        if (!indexBusy(index)){
+            throw new IllegalArgumentException("index does not exist");
+        }
+
+        Cell current = first;
+
+        for (int i = 0; i < index; i++) {
+            current = current.getNext();
+        }
+        return current;
     }
 
     public Object get(int index){

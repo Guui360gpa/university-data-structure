@@ -14,5 +14,8 @@ public class LinkedListTest {
 
         list.add("marcelo");
         System.out.println(list);
+
+        list.add(2,"gabriel");
+        System.out.println(list);
     }
 }
