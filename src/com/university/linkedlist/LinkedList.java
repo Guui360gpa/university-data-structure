@@ -113,6 +113,14 @@ public class LinkedList {
     }
 
     public boolean contains(Object o){
+        Cell current = this.first;
+
+        while (current != null){
+            if (current.getElement().equals(o)) {
+                return true;
+            }
+            current = current.getNext();
+        }
         return false;
     }
 
