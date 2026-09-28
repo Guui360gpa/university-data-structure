@@ -17,5 +17,10 @@ public class LinkedListTest {
 
         list.add(2,"gabriel");
         System.out.println(list);
+
+        Object x = list.get(2);
+        System.out.println(x);
+
+        System.out.println("Length: " + list.length());
     }
 }

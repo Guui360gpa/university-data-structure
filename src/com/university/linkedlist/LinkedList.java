@@ -59,7 +59,7 @@ public class LinkedList {
     }
 
     public Object get(int index){
-        return null;
+        return getCell(index).getElement();
     }
 
     public void remove(int index){
@@ -67,7 +67,7 @@ public class LinkedList {
     }
 
     public int length(){
-        return 0;
+        return this.totElements;
     }
 
     public boolean contains(Object o){
