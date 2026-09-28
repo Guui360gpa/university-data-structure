@@ -22,5 +22,8 @@ public class LinkedListTest {
         System.out.println(x);
 
         System.out.println("Length: " + list.length());
+
+        list.removeToBeginning();
+        System.out.println(list);
     }
 }

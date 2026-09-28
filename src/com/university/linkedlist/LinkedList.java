@@ -62,6 +62,17 @@ public class LinkedList {
         return getCell(index).getElement();
     }
 
+    public void removeToBeginning(){
+        if (this.totElements == 0){
+            throw new IllegalArgumentException("empty list");
+        }
+        this.first = this.first.getNext();
+        this.totElements--;
+        if (totElements == 0){
+            this.last = null;
+        }
+    }
+
     public void remove(int index){
 
     }
