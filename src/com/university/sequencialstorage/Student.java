@@ -1,4 +1,4 @@
-package com.university;
+package com.university.sequencialstorage;
 
 public class Student {
     private String name;

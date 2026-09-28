@@ -1,6 +1,4 @@
-package com.university;
-
-import java.util.Arrays;
+package com.university.sequencialstorage;
 
 public class ArrayTest {
     public static void main(String[] args) {
