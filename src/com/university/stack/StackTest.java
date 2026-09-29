@@ -9,6 +9,9 @@ public class StackTest {
         stack.push("Guilherme");
         System.out.println(stack);
 
+        String name = stack.peek();
+        System.out.println(name);
+
         String r1 = stack.pop();
         System.out.println(r1);
         String r2 = stack.pop();
@@ -16,5 +19,7 @@ public class StackTest {
         System.out.println(stack);
 
         System.out.println(stack.isEmpty());
+
+
     }
 }

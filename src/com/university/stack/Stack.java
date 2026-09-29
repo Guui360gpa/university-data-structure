@@ -14,6 +14,10 @@ public class Stack {
         return names.removeLast();
     }
 
+    public String peek(){
+        return names.getLast();
+    }
+
     public boolean isEmpty(){
         return names.isEmpty();
     }
