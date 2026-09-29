@@ -11,6 +11,14 @@ public class Queue {
         students.add(student);
     }
 
+    public String poll(){
+        return students.removeFirst();
+    }
+
+    public boolean isEmpty() {
+        return students.isEmpty();
+    }
+
     @Override
     public String toString() {
         return students.toString();
