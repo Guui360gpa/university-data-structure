@@ -28,5 +28,8 @@ public class LinkedListTest {
 
         list.removeFromEnd();
         System.out.println(list);
+
+        System.out.println(list.contains("mauricio"));
+        System.out.println(list.contains("danilo"));
     }
 }
