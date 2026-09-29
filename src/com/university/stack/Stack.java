@@ -1,8 +1,13 @@
 package com.university.stack;
 
-public class Stack {
-    public void insert(String name){
+import java.util.LinkedList;
+import java.util.List;
 
+public class Stack {
+    private List<String> names = new LinkedList<String>();
+
+    public void insert(String name){
+        names.add(name);
     }
 
     public String remove() {
@@ -11,5 +16,10 @@ public class Stack {
 
     public boolean isEmpty(){
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return names.toString();
     }
 }
