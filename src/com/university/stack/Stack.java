@@ -6,16 +6,16 @@ import java.util.List;
 public class Stack {
     private List<String> names = new LinkedList<String>();
 
-    public void insert(String name){
+    public void push(String name){
         names.add(name);
     }
 
-    public String remove() {
-        return names.remove(names.size()-1);
+    public String pop() {
+        return names.removeLast();
     }
 
     public boolean isEmpty(){
-        return false;
+        return names.isEmpty();
     }
 
     @Override
