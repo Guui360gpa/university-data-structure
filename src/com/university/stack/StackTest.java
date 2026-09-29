@@ -8,5 +8,11 @@ public class StackTest {
         System.out.println(stack);
         stack.insert("Guilherme");
         System.out.println(stack);
+
+        String r1 = stack.remove();
+        System.out.println(r1);
+        String r2 = stack.remove();
+        System.out.println(r2);
+        System.out.println(stack);
     }
 }

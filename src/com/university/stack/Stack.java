@@ -11,7 +11,7 @@ public class Stack {
     }
 
     public String remove() {
-        return "";
+        return names.remove(names.size()-1);
     }
 
     public boolean isEmpty(){
